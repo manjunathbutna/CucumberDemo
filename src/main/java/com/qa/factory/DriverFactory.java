@@ -3,6 +3,8 @@ package com.qa.factory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -28,7 +30,7 @@ public class DriverFactory {
 		else if(browser.equals("edge")) {
 			EdgeOptions options = new EdgeOptions();
 			WebDriverManager.edgedriver().setup();
-			tldriver.set(driver);
+			tldriver.set(new EdgeDriver());
 		}
 		else if(browser.equals("Firefox")) {
 			WebDriverManager.firefoxdriver().setup();

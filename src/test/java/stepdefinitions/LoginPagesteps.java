@@ -53,7 +53,30 @@ public class LoginPagesteps {
 
 	@Then("url of the page should be {string}")
 	public void url_of_the_page_should_be(String expextedURL) {
+		System.out.println("Expected URL is "+expextedURL);
 		Assert.assertEquals(expextedURL, lp.landingPageURL());
 	}
+	
+	@Given("User logged in as {string} and {string}")
+	public void User_logged_in_as(String username, String password) {
+		System.out.println("Before Login");
+		lp.login(username, password);
+		System.out.println("Login successful");
+	}
+	@When("user is on inventory page")
+	public void user_is_on_inventory_page() {
+	    System.out.println(lp.pageTitle());
+	}
+
+	@When("user clicks on open menu button")
+	public void user_clicks_on_open_menu_button() throws InterruptedException {
+	    lp.clickOnMenu();
+	}
+
+	@When("user clicks on logout button")
+	public void user_clicks_on_logout_button() throws InterruptedException{
+	    lp.clickOnLoginbtn();
+	}
+	
 
 }
