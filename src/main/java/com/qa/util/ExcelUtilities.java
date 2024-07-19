@@ -1,8 +1,8 @@
-package com.Admin.qa.util;
+package com.qa.util;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import com.Admin.qa.Base.TestBase;
+import com.qa.Base.TestBase;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
